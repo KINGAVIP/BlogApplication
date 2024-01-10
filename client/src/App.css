@@ -1,0 +1,15 @@
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100vw;
+  margin-top: 7%;
+}
+
+body.chakra-ui-light {
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333333; /* Dark text color */
+}
+body.chakra-ui-dark {
+  background-color: #222222; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
