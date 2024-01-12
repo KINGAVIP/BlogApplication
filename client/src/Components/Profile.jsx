@@ -43,7 +43,7 @@ const Profile = () => {
         mt="6"
         padding={0}
         spacing={4}
-        templateColumns="repeat(auto-fill,minmax(400px,1fr))"
+        columns={[1, 2, 2]}
       >
         {profiledata.map((item) => (
           <Cards

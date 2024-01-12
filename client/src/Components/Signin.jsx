@@ -44,7 +44,7 @@ const Signin = () => {
       <ToastContainer />
       <Flex m="5" justifyContent={"center"} alignItems={"center"} h="81vh">
         <Flex
-          w="50%"
+          w={{ base: "100%", md: "50%" }}
           flexDir={"column"}
           p="4"
           textAlign={"center"}

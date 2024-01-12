@@ -43,10 +43,9 @@ const Login = () => {
     return <div>{user.email} is logged in</div>;
   }
   return (
-    <Flex m="5" justifyContent={"center"} alignItems={"center"} h="81vh">
-      {console.log(user)}
+    <Flex m="5" h="70vh" justifyContent={"center"} alignItems={"center"}>
       <Flex
-        w="50%"
+        w={{ base: "100%", md: "50%" }}
         flexDir={"column"}
         p="4"
         textAlign={"center"}

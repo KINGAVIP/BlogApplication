@@ -24,8 +24,12 @@ const Home = () => {
   );
   return (
     <>
-      <Flex justifyContent={"center"} my="8">
-        <Flex justify={"space-between"} align={"center"} w="50%">
+      <Flex justifyContent={"center"} mt="8">
+        <Flex
+          justify={"space-between"}
+          align={"center"}
+          w={{ base: "70%", md: "50%" }}
+        >
           <Input
             type="text"
             placeholder="Search the blogs"
@@ -34,11 +38,7 @@ const Home = () => {
           ></Input>
         </Flex>
       </Flex>
-      <SimpleGrid
-        padding={4}
-        spacing={4}
-        templateColumns="repeat(auto-fill,minmax(500px,1fr))"
-      >
+      <SimpleGrid padding={4} spacing={4} columns={[1, 2, 2]}>
         {filtereddata &&
           filtereddata.map((item) => (
             <Cards key={item.id} by={item.email} {...item} />
