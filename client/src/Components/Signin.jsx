@@ -23,7 +23,7 @@ const Signin = () => {
       return;
     }
     axios
-      .post("/api/signup", { username, email, password })
+      .post("/auth/signup", { username, email, password })
       .then((response) => {
         toast.info("Kuch hua");
         if (response.status === 200) {

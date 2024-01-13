@@ -20,7 +20,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const user = { email, password };
-    axios.post("/api/signin", user).then((response) => {
+    axios.post("/auth/signin", user).then((response) => {
       if (response.data && response.data.error) {
         toast.error(response.data.error);
       } else {

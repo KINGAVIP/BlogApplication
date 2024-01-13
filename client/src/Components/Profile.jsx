@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 //import Cards from "./Cards";
 const Profile = () => {
   const [profiledata, setProfileData] = useState([]);
-  useEffect(() => {
-    const email = localStorage.getItem("users");
-    // console.log(email);
-    axios.get(`/api/getuser?email=${email}`).then((response) => {
+  const email = localStorage.getItem("users");
+  // console.log(email);
+  const fetchUserData = () => {
+    axios.get(`/auth/getuser?email=${email}`).then((response) => {
       if (response.data) {
         setProfileData([]);
         response.data.map((item) => {
@@ -20,10 +20,15 @@ const Profile = () => {
         // console.log("hi");
       }
     });
-  }, [profiledata]);
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
   const handleDelete = (postid) => {
     const updateddata = profiledata.filter((post) => post.id !== postid);
     setProfileData(updateddata);
+    fetchUserData();
   };
 
   return (
